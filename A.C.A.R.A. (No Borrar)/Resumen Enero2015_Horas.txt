@@ -1,0 +1,68 @@
+1	01/01/2015	14:00	17:00	3:00	3	0	Desarrollo	Facturaciíon de CPÄ Pendientes Emision de Notas de Credito y Debito para pasaje de Saldos del Ente 20 a 25.
+		17:00	18:00	1:00	0	1	Mantenimiento	 Inicialización de Numeradores para Año 2015
+2	02/01/2015	14:30	18:30	4:00	4	0	Desarrollo	Proyecto Cédulas
+3	03/01/2015	14:00	16:00	2:00	2	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios
+4	04/01/2015	14:00	16:00	2:00	2	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios
+5	05/01/2015	9:30	13:30	4:00	4	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios
+6	05/01/2015	14:30	17:30	3:00	3	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios
+7	06/01/2015	10:00	15:00	5:00	0	5	Mantenimiento	"Cambio en Tabla  Entes de ""Orden de Cheques"".  "
+						0		Revición de logica de DNVentas - WebService para Servicio de Actualizacion de Facturacion de Suministros
+						0		Por Problemas. Chats con Towebs por cambios en configuración. 
+						0		Cambio de Elementos ACE Y CPM A Nuevos Cedulas Unicas en pedidos pendientes según Listado de Troqueladoras
+8	06/01/2015	16:00	20:00	4:00	4	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios. 
+						0		Logica para Excluir de los Productos Elementos 13
+9	07/01/2015	9:00	13:00	4:00	4	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios. 
+						0		Logica para Excluir de los Productos Elementos 13
+10	07/01/2015	15:00	19:00	4:00	0	4	Mantenimiento	Facturacíon de CPA Pendientes Emision de Notas de Credito y Debito para pasaje de Saldos del Ente 20 a 25. 
+11	09/01/2015	14:00	18:00	4:00	4	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios. 
+						0		Logica para Excluir de los Productos Elementos 13
+12	12/01/2015	9:00	13:00	4:00	0	4	Mantenimiento	Pasaje de Pedidos Pendientes de Stock de ACE a CUA,  
+						0		Alta de Clientes en Web. 
+						0		Condiciones de Venta, Ajuste de Lógica, 
+						0		Ajustes en Facturación Sura, Control de Fechas, 
+						0		Envio de Mails SURA
+13	12/01/2015	15:00	17:00	2:00	2	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios. 
+						0		Logica para Excluir de los Productos Elementos 13
+14	13/01/2015	9:00	12:00	3:00	0	3	Mantenimiento	Envío de Mail SIOMAA, Ajustes en planilla de Fcaturación SIOMAA,  
+						0		Ajuste de Logica en Impresión de Totals de Facturación SURA
+15	13/01/2015	14:00	18:00	4:00	4	0	Desarrollo	Nueva Opcion de Pago con cheques en ACARA para Concecionarios. 
+						0		Logica para Agrupar Pedidos de los Elementos 13, 
+						0		Nuevos Conroles en Facturación SURA y SIOMAA para Controlar Usuario Conectados
+16	14/01/2015	9:00	15:00	6:00	6	0	Desarrollo	Implementación de Formularios 13 en la Selección de Productos para Opción Pedidos con Cheque en ACARA. 
+						0		Nuevo Store en Base de Datos para tener en cuenta a las Fabricas Terminales 
+						0		"con respecto a Prod ""APA"" en cuanto a precio y Zona del país. "
+						0		Nueva Logica en Paginas Web.
+17	14/01/2015	16:00	18:00	2:00	0	2	Mantenimiento	"Seguimiento de Pedidos y Modulo de facturación Rendición ""0"" por cantidad de Productos Rechazados por falta sa Saldo"
+18	15/01/2015	9:00	10:00	1:00	0	1	Mantenimiento	Ajustes de Logica en Consulta de Rendiciones Form 13 por Cambios en Tabla Entes Pedidos 
+		10:00	14:00	4:00	4	0	Desarrollo	Relacionados con Cheque en ACARA. 
+						0	Desarrollo	Nuevos Stores en Base de Datos para Rendiciones Excluyendo nuevos Datos. 
+						0	Desarrollo	Nuevo Campo en Tabla EntesPedidos en SQL
+19	16/01/2015	14:00	17:00	3:00	0	3	Mantenimiento	Se Continuó con el Desarrollo de Controles para SIOMMA y SURA relacionados con Usuarios Conectados. 
+		17:00	18:00	1:00	0	1	Mantenimiento	Cambio de Logica en Job Actualizacón Local+Internet
+20	19/01/2015	9:00	13:00	4:00	4	0	Desarrollo	Programación de Facturación Individual de Pedidos en Forma Automática de Pedidos Con cheque en ACARA. 
+		13:00	14:00	1:00		1	Mantenimiento	Mantenimiento: Ajuste de Stores Procedures Relacionados con Totales de Distrib. Ente 13
+21	20/01/2015	10:00	15:00	5:00	5	0	Desarrollo	Programación de Facturación Individual de Pedidos en Forma Automática de Pedidos Con cheque en ACARA. 
+						0		Programación de Aplicación para Descargar Consumo de Cédulas Unicas desde WebService de DNRPA
+22	21/01/2015	9:00	14:00	5:00	5	0	Desarrollo	Programación de Facturación Individual de Pedidos en Forma Automática de Pedidos Con cheque en ACARA. 
+						0		Programación de Aplicación para Descargar Consumo de Cédulas Unicas desde WebService de DNRPA
+23	22/01/2015	9:30	14:30	5:00	5	0	Desarrollo	Programación de Facturación Individual de Pedidos en Forma Automática de Pedidos Con cheque en ACARA. 
+		14:30	15:30	1:00	0	1	Mantenimiento	Mantenimiento: Seguimiento de Remitos RI-2010-1466 y 1467 pod diferencia de Stock 360 Unidades Prod. 12
+23	23/01/2015	9:00	14:00	5:00	5	0	Desarrollo	Programación de Facturación Individual de Pedidos en Forma Automática de Pedidos Con cheque en ACARA. 
+						0		Nuevo Estado para Pedidos conm Cheque en ACARA. 
+						0		Job. Para Actualizacioón Automatica de Estados
+24	26/01/2015	10:00	15:00	5:00	0	5	Mantenimiento	Cambio de Logica en Login de Usuarios en Internet para determinar si visiualiza o no la opciòn de compra para formularios y aduana. 
+						0		"Cambio de Logica en wacafac. Login para direccionar a opciones de ""CONSULTA"" "
+						0		para permitir el ingreso a Usuarios de Ventas durante la facturaciòn automàtica. 
+						0		"Nuevo Ente ""Rio Gallegos "" ""G"" para asociar a form 13 (v3A y V3) para la venta de "
+						0		formularios por web en opciòn de Cheques en ACARA. 
+						0		Cambio de Logica en Store Procedure Asociado al Item anterior.
+23	27/01/2015	9:30	10:30	1:00	0	1	Mantenimiento	Control de Duplicados. 
+		10:30	15:30	5:00	5	0	Desarrollo	Logica para Descargar Archivo de Informaciòn de Suministros de Cedulas Solo para Consumo. 
+						0		Pruebas y Control de Cedulas con Base de Ventas
+24	28/01/2015	10:00	14:00	4:00		4	Mantenimiento	Nuevo Job Para Importar Bancos a Web para actualizar Datos. 
+		14:00	16:00	2:00	0	2	Mantenimiento	Cambio de Logica en Reporte de Impresòn de Facturas para considerar Cod. De Barras 
+						0	Mantenimiento	instalados en Entorno Windows 7. 
+						0	Mantenimiento	Rev. De Logica de Flete
+23	29/01/2015	14:00	18:00	4:00	4	0	Desarrollo	Ajustes Finales en Stores Relacionados con Pedidos de Cheque en ACARA. 
+						0		Se Finalizó logica de Conrol de Usuarios Conecatos para Facturación
+24	30/01/2015	9:00	13:00	4:00	4	0	Desarrollo	Programación de Aplicación para Descargar Consumo de Cédulas Unicas desde WebService de DNRPA

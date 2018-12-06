@@ -1,0 +1,42 @@
+Ingreso: 14:30 hs.-
+Egreso: 18:45 hs.-
+
+Total Horas: 4:15 hs
+
+Ingreso: 08:30 hs.-
+Egreso: 10:30 hs.-
+
+Total Horas: 2:00 hs
+
+Ingreso: 14:30 hs.-
+Egreso: 18:30 hs.-
+
+Total Horas: 4:00 hs
+
+
+Ingreso: 14:15 hs.-
+Egreso: 18:30 hs.-
+
+Total Horas: 4:15 hs
+
+Ingreso: 14:00 hs.-
+Egreso: 18:30 hs.-
+
+Total Horas: 4:30 hs
+
+
+
+Ingreso: 14:45 hs.-
+Egreso: 18:45 hs.-
+
+Total Horas: 4:00 hs
+
+Ingreso: 14:30 hs.-
+Egreso: 19:00 hs.-
+
+Total Horas: 4:30 hs
+
+Ingreso: 09:00 hs.-
+Egreso: 15:00 hs.-
+
+Total Horas: 6:00 hs

@@ -1,0 +1,6 @@
+TITLE=Seguimiento de Sistemas
+sysformats = ON
+collate = SPANISH
+FDOW = 2
+FWEEK = 2
+CPDIALOG = ON

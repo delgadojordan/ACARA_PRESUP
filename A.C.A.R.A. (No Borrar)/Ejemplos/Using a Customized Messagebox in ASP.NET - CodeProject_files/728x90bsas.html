@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0151)https://tpc.googlesyndication.com/sadbundle/16596360545247777275/728x90bsas.html?csp=er3#t=5558612549045172494&p=http%3A%2F%2Ftpc.googlesyndication.com -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./exitapi-impl.js" type="text/javascript"></script><script src="./addata.js" type="text/javascript"></script><meta content="width=728,height=90" name="ad.size"><title>728x90bsas</title><script src="./easeljs-0.8.1.min.js"></script><script src="./tweenjs-0.6.1.min.js"></script><script src="./movieclip-0.8.1.min.js"></script><script src="./preloadjs-0.6.1.min.js"></script><script src="./728x90bsas.js"></script><script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib._728x90bsas();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script></head><body onclick="ExitApi.exit();" onload="init();" style="margin:0px; background-color:#D4D4D4; cursor:pointer">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<canvas height="90" id="canvas" style="background-color:#FFFFFF" width="728"></canvas>
+
+</body></html>

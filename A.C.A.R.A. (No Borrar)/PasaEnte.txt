@@ -1,0 +1,101 @@
+close table all
+
+ActualizaDatos = .f.
+
+* Abre Tablas
+use f:\acabas\bases\param in 0
+
+use f:\acabas\bases\SaldosE in 0
+
+use f:\acabas\bases\ctacte in 0
+select ctacte
+set index to f:\acabas\bases\ctacte
+gnFieldcount = AFIELDS(gaMiMatriz) 
+create cursor CtacteN from array gaMiMatriz
+
+use f:\acabas\bases\ctamemo in 0
+select ctamemo
+set index to f:\acabas\bases\ctamemo
+gnFieldcount = AFIELDS(gaMiMatriz) 
+create cursor CtamemoN from array gaMiMatriz
+
+
+use f:\acabas\bases\numerad in 0
+select numerad
+set index to f:\acabas\bases\numerad 
+
+
+* Busca el Proximo Nro de Transacción
+
+
+lfecha
+lcodente = "1  "
+lus = "SISTEMAS"
+
+lDetalle = ""
+
+select SaldosE
+scan
+* Determina Tipo de Comprobante
+if SaldosE.importe > 0
+	lcodcomp = "NC "
+	limporte = SaldosE.importe
+	lcodtra = "NC$"
+	ldebcred = "C"
+else
+	lcodcomp = "ND "
+	limporte = SaldosE.importe * (-1)
+	lcodtra = "ND$"
+	ldebcred = "D"
+endif
+
+
+lhora = TIME()
+select Numerad
+set order to tag Numerad1
+seek lcodcomp + lcodente
+if found()
+
+	lletcomp = Numerad.letra
+	lprefcomp = Numerad.nropref
+	lnrocomp = Numerad.proxnro
+	
+	if ActualizaDatos
+		replace Numerad.proxnro with Numerad.proxnro + 1
+	endif	
+
+else
+	= Messagebox("No Encontró Numerador: " + lcodcomp + ", Ente: " + lcodente , 64, "Información")
+	return
+endif
+lnrotrans = lnrotrans + 1
+
+* Busca Nro de Comprobante
+
+numerador+codente
+
+if ActualizaDatos = .f.
+	insert into ctacteN (tipocli, codcli, codcomp, letcomp, prefcomp, nrocomp, fecha, importe, saldo,codvta, codtra, debcred, codente, us, hora, nrotrans) ;
+		values (SaldosE.tipocli, SaldosE.codcli, lcodcomp , lletcomp, lprefcomp, lnrocomp, lfecha, limporte, limporte ,1, lcodtra, ldebcred, lcodente, lus, lhora, lnrotrans)					
+		
+	insert into CtamemoN (codtra, nrotrans, detalle ) ;
+			values (lcodtra, lnrotrans, lDetalle )	
+endif
+
+if ActualizaDatos  && Actualiza en Base de Datos
+	insert into ctacte (tipocli, codcli, codcomp, letcomp, prefcomp, nrocomp, fecha, importe, saldo,codvta, codtra, debcred, codente, us, hora, nrotrans) ;
+		values (SaldosE.tipocli, SaldosE.codcli, lcodcomp , lletcomp, lprefcomp, lnrocomp, lfecha, limporte, limporte ,1, lcodtra, ldebcred, lcodente, lus, lhora, lnrotrans)					
+		
+	insert into Ctamemo (codtra, nrotrans, detalle ) ;
+			values (lcodtra, lnrotrans, lDetalle )	
+endif
+
+
+select SaldosE
+endscan	
+
+if ActualizaDatos 
+	update param set nrotrans = lnrotrans
+endif
+
+close table all

@@ -1,0 +1,4 @@
+
+Validar la base de datos WSS:
+Necesita acceso EXCLUSIVE con permiso de escritura para volver a generar el índice estructural.
+El contenedor de base de datos es válido.

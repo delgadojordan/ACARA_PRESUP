@@ -1,0 +1,140 @@
+*       *********************************************************
+*       *                                                         
+*       * 08/15/07              MENU1.MPR               15:11:08  
+*       *                                                         
+*       *********************************************************
+*       *                                                         
+*       * Nombre del autor                                        
+*       *                                                         
+*       * Copyright (C) 2007 Nombre de compañía                   
+*       * Dirección                                               
+*       * Ciudad,     Código pos                                  
+*       * País                                              
+*       *                                                         
+*       * Descripción:                                            
+*       * Este PROGRAMA lo ha generado automáticamente GENMENU.    
+*       *                                                         
+*       *********************************************************
+
+
+*       *********************************************************
+*       *                                                         
+*       *                    Definición de menú                   
+*       *                                                         
+*       *********************************************************
+*
+
+
+DEFINE PAD _25o0wjqni OF _MSYSMENU PROMPT "\<Archivo" COLOR SCHEME 3 ;
+	KEY ALT+A, ""
+DEFINE PAD _25o0wjqnj OF _MSYSMENU PROMPT "\<Edición" COLOR SCHEME 3 ;
+	KEY ALT+E, ""
+DEFINE PAD _25o0wjqnk OF _MSYSMENU PROMPT "\<Funciones" COLOR SCHEME 3 ;
+	KEY ALT+F, ""
+DEFINE PAD _25o0wjqnl OF _MSYSMENU PROMPT "\<Ventana" COLOR SCHEME 3 ;
+	KEY ALT+V, ""
+DEFINE PAD _25o0wjqnm OF _MSYSMENU PROMPT "\<Herramientas" COLOR SCHEME 3 ;
+	KEY ALT+H, ""
+DEFINE PAD _25o0wjqnn OF _MSYSMENU PROMPT "Ay\<uda" COLOR SCHEME 3 ;
+	KEY ALT+U, ""
+ON PAD _25o0wjqni OF _MSYSMENU ACTIVATE POPUP archivo
+ON PAD _25o0wjqnj OF _MSYSMENU ACTIVATE POPUP edición
+ON PAD _25o0wjqnl OF _MSYSMENU ACTIVATE POPUP ventana
+ON PAD _25o0wjqnm OF _MSYSMENU ACTIVATE POPUP herramient
+ON PAD _25o0wjqnn OF _MSYSMENU ACTIVATE POPUP ayuda
+
+DEFINE POPUP archivo MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _MFI_CLOSE OF archivo PROMPT "Cerrar"
+DEFINE BAR _MFI_CLALL OF archivo PROMPT "Cerrar todo"
+DEFINE BAR 3 OF archivo PROMPT "\-"
+DEFINE BAR 4 OF archivo PROMPT "Cliente"
+DEFINE BAR 5 OF archivo PROMPT "Certificaciones"
+DEFINE BAR 6 OF archivo PROMPT "Recursos Humanos"
+DEFINE BAR 7 OF archivo PROMPT "Sistemas"
+DEFINE BAR 8 OF archivo PROMPT "Configurar  \<Impresora" ;
+	KEY ALT+P, "Alt+P"
+DEFINE BAR 9 OF archivo PROMPT "\-"
+DEFINE BAR 10 OF archivo PROMPT "\<Salir" ;
+	KEY ALT+F4, "Alt+F4"
+ON SELECTION BAR 4 OF archivo do form cliente
+ON SELECTION BAR 5 OF archivo do form cert
+ON SELECTION BAR 6 OF archivo do form recurso
+ON SELECTION BAR 7 OF archivo do form sistema
+ON SELECTION BAR 8 OF archivo =sys(1037)
+ON SELECTION BAR 10 OF archivo ;
+	DO _25o0wjqno ;
+	IN LOCFILE("WSS\FORM\MENU1" ,"MPX;MPR|FXP;PRG" ,"DÓNDE está MENU1?")
+
+DEFINE POPUP edición MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _MED_UNDO OF edición PROMPT "Deshacer" ;
+	KEY CTRL+Z, "Ctrl+Z"
+DEFINE BAR _MED_REDO OF edición PROMPT "Rehacer" ;
+	KEY CTRL+R, "Ctrl+R"
+DEFINE BAR 3 OF edición PROMPT "\-"
+DEFINE BAR _MED_CUT OF edición PROMPT "Cortar" ;
+	KEY CTRL+C, "Ctrl+C"
+DEFINE BAR _MED_COPY OF edición PROMPT "Copiar" ;
+	KEY CTRL+C, "Ctrl+C"
+DEFINE BAR _MED_PASTE OF edición PROMPT "Pegar" ;
+	KEY CTRL+V, "Ctrl+V"
+DEFINE BAR 7 OF edición PROMPT "\-"
+DEFINE BAR _MED_SLCTA OF edición PROMPT "Seleccionar" ;
+	KEY CTRL+A, "Ctrl+A"
+DEFINE BAR 9 OF edición PROMPT "\-"
+DEFINE BAR _med_find OF edición PROMPT "B\<uscar..." ;
+	KEY CTRL+F, "Ctrl+F"
+DEFINE BAR _med_finda OF edición PROMPT "Buscar siguie\<nte" ;
+	KEY CTRL+G, "Ctrl+G"
+
+DEFINE POPUP ventana MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR _MWI_ARRAN OF ventana PROMPT "Organizar  todo"
+DEFINE BAR 2 OF ventana PROMPT "\-"
+DEFINE BAR _MWI_HIDE OF ventana PROMPT "Ocultar"
+DEFINE BAR _MWI_HIDEA OF ventana PROMPT "Ocultar todas"
+DEFINE BAR _MWI_SHOWA OF ventana PROMPT "Mostrar"
+DEFINE BAR _MWI_CLEAR OF ventana PROMPT "Limpiar"
+DEFINE BAR _MWI_ROTAT OF ventana PROMPT "Recorrer"
+
+DEFINE POPUP herramient MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF herramient PROMPT "Organizar Archivos"
+ON SELECTION BAR 1 OF herramient do form org
+
+DEFINE POPUP ayuda MARGIN RELATIVE SHADOW COLOR SCHEME 4
+DEFINE BAR 1 OF ayuda PROMPT "Acerca del Sistema ..."
+ON SELECTION BAR 1 OF ayuda do form acerca
+
+ON SELECTION MENU _MSYSMENU READ EVENTS
+
+*       *********************************************************
+*       *                                                         
+*       *              Limpiar Código y Procedimientos            
+*       *                                                         
+*       *********************************************************
+*
+
+READ EVENTS
+
+*       *********************************************************
+*       *                                                         
+*       * _25O0WJQNO  ON SELECTION BAR 10 OF POPUP archivo        
+*       *                                                         
+*       * Procedure Origin:                                       
+*       *                                                         
+*       * From Menu:  MENU1.MPR,            Record:   15          
+*       * Called By:  ON SELECTION BAR 10 OF POPUP archivo        
+*       * Prompt:     Salir                                       
+*       * Snippet:    1                                           
+*       *                                                         
+*       *********************************************************
+*
+PROCEDURE _25o0wjqno
+vrespuesta=MESSAGEBOX(" Cierra Sistema ?",68, "Confirme...")
+IF vrespuesta = 7
+	ON SHUTDOWN DO SALIDA
+	return
+endif	
+ON SHUTDOWN
+clear events
+CLOSE ALL DATABASES
+QUIT
+
